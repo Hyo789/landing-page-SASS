@@ -1,0 +1,145 @@
+@use '../components/_root.scss' as*;
+
+/* MAIN SECTION */
+
+section {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 100vh;
+	padding: 0 100px;
+	.contentBox {
+		position: relative;
+		max-width: 600px;
+		z-index: 1000;
+		h2 {
+			font-size: 3.75rem;
+			color: $couleur-titre;
+			text-transform: uppercase;
+		}
+		p {
+			font-size: 1.1rem;
+			color: $couleur-titre;
+		}
+		.countDown {
+			display: flex;
+			margin: 20px 0;
+			.time {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				background: $couleur-titre;
+				margin-right: 20px;
+				font-size: 3rem;
+				min-width: 110px;
+				font-weight: 700;
+				padding: 10px 5px 15px;
+				border-radius: 4px;
+				color: $couleur-secondaire;
+				span {
+					margin-top: -10px;
+					font-size: $fontSize-1_25;
+					font-weight: 600;
+					color: $couleur-principale;
+				}
+			}
+		}
+		a {
+			position: relative;
+			margin-top: 10px;
+			display: inline-block;
+			background: $couleur-secondaire;
+			color: $couleur-titre;
+			font-size: $fontSize-1_25;
+			letter-spacing: 2px;
+			padding: 15px 35px;
+			text-decoration: none;
+			border-radius: 40px;
+		}
+	}
+	.imgBox {
+		img {
+			position: relative;
+			max-width: 900px;
+			width: 100%;
+			margin-top: 130px;
+			z-index: 2;
+		}
+	}
+	.wave {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		z-index: 1;
+		pointer-events: none;
+	}
+}
+
+/* NEWSLETTER */
+
+.newsletter {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 600px;
+	padding: 60px;
+	background: $couleur-titre;
+	z-index: 10000;
+	box-shadow: 0 0 0 100vh rgba(49, 39, 71, 0.95);
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.5s;
+	.newsletter__title {
+		h2 {
+			font-size: 3rem;
+			color: $couleur-principale;
+		}
+		p {
+			font-size: $fontSize-1_25;
+			color: $couleur-principale;
+		}
+	}
+	.newsletter__form {
+		margin-top: 20px;
+		input {
+			padding: 10px;
+			border: 1px solid #999;
+			width: 300px;
+			font-size: 1.125rem;
+			outline: none;
+		}
+		input[type="submit"] {
+			padding: 10px;
+			outline: none;
+			width: 140px;
+			color: $couleur-titre;
+			background: $couleur-secondaire;
+			border: 1px solid $couleur-secondaire;
+			letter-spacing: 2px;
+			box-sizing: border-box;
+			cursor: pointer;
+		}
+	}
+	.newsletter__policy {
+		margin-top: 10px;
+		p {
+			font-size: 0.75rem;
+		}
+	}
+	.close {
+		position: absolute;
+		top: 20px;
+		right: 40px;
+		width: 40px;
+		height: 40px;
+		cursor: pointer;
+	}
+}
+.newsletter.active {
+	visibility: visible;
+	opacity: 1;
+}

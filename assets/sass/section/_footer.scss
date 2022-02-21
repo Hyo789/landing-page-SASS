@@ -1,0 +1,24 @@
+@use '../components/_root.scss' as*;
+
+/* FOOTER */
+
+footer {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.copy {
+		position: absolute;
+		bottom: 30px;
+		color: $couleur-titre;
+		z-index: 1000;
+		a {
+			text-decoration: none;
+			color: $couleur-principale;
+			&:hover {
+				text-decoration: underline;
+				color: $couleur-principale;
+			}
+		}
+	}
+}

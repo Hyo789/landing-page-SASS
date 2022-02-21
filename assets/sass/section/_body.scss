@@ -1,0 +1,16 @@
+@use '../components/_root.scss' as*;
+
+/* POLICE */
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap";
+
+/* GENERAL */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+body {
+	background: $couleur-principale;
+}
